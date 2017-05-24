@@ -36,6 +36,14 @@ div#blue {
 }
 div#blue section {
 	margin-left: .75em;
+	margin-bottom: 2em;
+}
+div#blue section input[type="submit"] {
+	font-size: 1.1em;
+	width: 100px;
+	border: 2px solid black;
+	border-radius: 7px;
+	margin-left: 2em;
 }
 
 
