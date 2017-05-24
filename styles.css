@@ -1,0 +1,121 @@
+/*** general styles ***/
+body {
+	font-family: sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 200;
+}
+/*** pink area styles ***/
+div#pink {
+	width: 90%;
+	height: 4em;
+	margin: 2em auto 1em auto;
+	border: 2px solid #000;
+	background-color:#FEA39F;
+}
+div#pink ul {
+	list-style-type: none;
+	margin-top: 1.5em;
+	padding-left: .75em;
+}
+div#pink ul li {
+	display: inline;
+	border-left: 2px solid #000;
+	padding-left: 3px;
+}
+div#pink ul li:nth-of-type(1) {
+	border-left: none;
+}
+div#pink ul li a {
+	color: #093CE3;
+}
+/*** blue area styles ***/
+div#blue {
+	width: 20%;
+	height: 25em;
+	margin-left: 5%;
+	border: 2px solid #000;
+	background-color: #3BCEFC;
+	display: inline;
+	float: left;
+}
+div#blue section {
+	margin-left: .75em;
+	margin-bottom: 2em;
+}
+div#blue input[type="range"] {
+	width: 75%;
+}
+div#blue select {
+	width: 75%;
+}
+div#blue section ul {
+	list-style-type: none;
+	display: inline;
+	padding-left: 0;
+	margin-top: 0;
+}
+div#blue section ul#left {
+	float: left;
+	margin-left: .75em;
+}
+div#blue section ul#right {
+	float: right;
+	margin-right: 1.5em;
+}
+div#blue section p {
+	margin-bottom: 5px;
+}
+div#blue section input[type="submit"] {
+	font-size: 1.1em;
+	width: 100px;
+	border: 2px solid black;
+	border-radius: 7px;
+	margin-left: 2em;
+}
+/*** yellow area styles ***/
+div#yellow {
+	width: 67%;
+	height: 25em;
+	margin-right: 5%;
+	border: 2px solid #000;
+	background-color: #F9F7AC;
+	display: inline;
+	float: right;
+}
+div#yellow section {
+	margin-left: 2.5em;
+}
+div#yellow section h2 {
+	color: #61420B;
+}
+div#yellow section ul {
+	list-style-type: none;
+	padding-left: 0;
+	margin-top: 0;
+	margin-bottom: 25px;
+}
+div#yellow section ul li {
+	display: inline;
+	border-left: 2px solid #000;
+	padding: 0 10px;
+}
+div#yellow section ul li:nth-of-type(1) {
+	border-left: none;
+	padding-left: 0;
+}
+div#yellow section h2 {
+	margin-bottom: 12px;
+	font-size: 1.75em;
+}
+
+
+
+
+
+
+
+
+
+
