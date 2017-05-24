@@ -44,6 +44,29 @@ div#blue section {
 	margin-left: .75em;
 	margin-bottom: 2em;
 }
+div#blue input[type="range"] {
+	width: 75%;
+}
+div#blue select {
+	width: 75%;
+}
+div#blue section ul {
+	list-style-type: none;
+	display: inline;
+	padding-left: 0;
+	margin-top: 0;
+}
+div#blue section ul#left {
+	float: left;
+	margin-left: .75em;
+}
+div#blue section ul#right {
+	float: right;
+	margin-right: 1.5em;
+}
+div#blue section p {
+	margin-bottom: 5px;
+}
 div#blue section input[type="submit"] {
 	font-size: 1.1em;
 	width: 100px;

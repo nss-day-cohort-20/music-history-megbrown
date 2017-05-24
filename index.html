@@ -19,19 +19,32 @@
 		<form>
 			<section>
 				<p>Song length:</p>
-				<p>slider thing here</p>
+				<input type="range" min="0" value="10" max="2000">
 			</section>
 			<section>
 				<p>Artist:</p>
-				<p>Dropdown Menu here</p>
+				<select name="artist">
+					<option value="opt">Option</option>
+				</select>
 			</section>
 			<section>
-				<p>Album:<p>
-				<p>Dropdown Menu here</p>
+				<p>Album:</p>
+				<select name="album">
+					<option value="opt">Option</option>
+				</select>
 			</section>
 			<section>
 				<p>Genre:</p>
-				<p>Check boxes here</p>
+				<ul id="left">
+					<li><input type="checkbox" name="genre" value="rock" checked="checked">Rock</li>
+					<li><input type="checkbox" name="genre" value="pop">Pop</li>
+					<li><input type="checkbox" name="genre" value="blues">Blues</li>
+				</ul>
+				<ul id="right">
+					<li><input type="checkbox" name="genre" value="classical">Classical</li>
+					<li><input type="checkbox" name="genre" value="jazz">Jazz</li>
+					<li><input type="checkbox" name="genre" value="hiphop">Hip Hop</li>
+				</ul>
 			</section>
 			<section>
 				<input type="submit" value="Filter">
