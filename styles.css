@@ -109,7 +109,27 @@ div#yellow section h2 {
 	margin-bottom: 12px;
 	font-size: 1.75em;
 }
-
+/*** add-music styles ***/
+div#white {
+	width: 30%;
+	min-height: 10em;
+	margin: 5em auto 0 auto;
+}
+div#white p {
+	margin-bottom: 1.3em;
+}
+div#white input[type="text"] {
+	float: right;
+	border: 2px solid #000;
+	font-size: 1.1em;
+}
+div#white input[type="submit"] {
+	font-size: 1.1em;
+	width: 125px;
+	border: 2px solid black;
+	border-radius: 7px;
+	margin-left: 7em;
+}
 
 
 
