@@ -75,6 +75,9 @@ div#blue section input[type="submit"] {
 	margin-left: 2em;
 }
 /*** yellow area styles ***/
+div#song-list {
+	display: block;
+}
 div#yellow {
 	width: 67%;
 	height: 25em;
