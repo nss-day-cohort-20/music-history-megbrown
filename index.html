@@ -8,15 +8,30 @@
   <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-	<div id="pink">
+	<nav id="pink">
 		<ul>
-			<li><a href="index.html">View Music</a></li>
-			<li><a href="add-music.html">Add Music</a></li>
-			<li><a href="profile.html">Profile</a></li>
+			<li id="list-music-link"><a href="#">List Music</a></li>
+			<li id="add-music-link"><a href="#">Add Music</a></li>
 		 </ul>
+	</nav>
+
+	<div id="add-music-page" class="hidden">
+		<div id="input-area">
+			<div class="input-item">
+				<p>Song:</p><input type="text" id="song-name-input">
+			</div>
+			<div class="input-item">
+				<p>Artist:</p><input type="text" id="artist-input">
+			</div>
+			<div class="input-item">
+				<p>Album:</p><input type="text" id="album-input">
+			</div>
+				<button>Add</button>
+		</div>
 	</div>
-	<div id="blue">
-		<form>
+
+	<div id="list-music-page">
+		<div id="blue">
 			<section>
 				<p>Song length:</p>
 				<input type="range" min="0" value="10" max="2000">
@@ -49,43 +64,44 @@
 			<section>
 				<input type="submit" value="Filter">
 			</section>
-		</form>
-	</div>
-	<div id="yellow">
-		<section>
-			<div id="song-list">
-			</div>
-<!-- 			<ul>
-				<li>Artist Name</li>
-				<li>Album Name</li>
-				<li>Genre</li>
-			</ul>
-		</section> -->
-<!-- 		<section>
-			<h2>Song Name</h2>
+		</div>
+		<div id="yellow">
+			<section>
+				<div id="song-list">
+				</div>
+	<!-- 			<ul>
+					<li>Artist Name</li>
+					<li>Album Name</li>
+					<li>Genre</li>
+				</ul>
+			</section> -->
+	<!-- 		<section>
+				<h2>Song Name</h2>
+					<ul>
+						<li>Artist Name</li>
+						<li>Album Name</li>
+						<li>Genre</li>
+					</ul>
+			</section>
+			<section>
+				<h2>Song Name</h2>
 				<ul>
 					<li>Artist Name</li>
 					<li>Album Name</li>
 					<li>Genre</li>
 				</ul>
-		</section>
-		<section>
-			<h2>Song Name</h2>
-			<ul>
-				<li>Artist Name</li>
-				<li>Album Name</li>
-				<li>Genre</li>
-			</ul>
-		</section>
-		<section>
-			<h2>Song Name</h2>
-			<ul>
-				<li>Artist Name</li>
-				<li>Album Name</li>
-				<li>Genre</li>
-			</ul>
-		</section> -->
+			</section>
+			<section>
+				<h2>Song Name</h2>
+				<ul>
+					<li>Artist Name</li>
+					<li>Album Name</li>
+					<li>Genre</li>
+				</ul> -->
+			</section>
+		</div>
 	</div>
+
 <script src="songs.js"></script>
 </body>
 </html>

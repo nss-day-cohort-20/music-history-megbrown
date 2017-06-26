@@ -7,33 +7,33 @@ h1, h2, h3, h4, h5, h6 {
 	font-weight: 200;
 }
 /*** pink area styles ***/
-div#pink {
+nav#pink {
 	width: 90%;
 	height: 4em;
 	margin: 2em auto 1em auto;
 	border: 2px solid #000;
 	background-color:#FEA39F;
 }
-div#pink ul {
+nav#pink ul {
 	list-style-type: none;
 	margin-top: 1.5em;
 	padding-left: .75em;
 }
-div#pink ul li {
+nav#pink ul li {
 	display: inline;
 	border-left: 2px solid #000;
 	padding-left: 3px;
 }
-div#pink ul li:nth-of-type(1) {
+nav#pink ul li:nth-of-type(1) {
 	border-left: none;
 }
-div#pink ul li a {
+nav#pink ul li a {
 	color: #093CE3;
 }
 /*** blue area styles ***/
 div#blue {
 	width: 20%;
-	height: 25em;
+	height: auto;
 	margin-left: 5%;
 	border: 2px solid #000;
 	background-color: #3BCEFC;
@@ -112,26 +112,34 @@ div#yellow section h2 {
 	margin-bottom: 12px;
 	font-size: 1.75em;
 }
-/*** add-music styles ***/
-div#white {
-	width: 30%;
-	min-height: 10em;
+
+/*** list-music-styles ***/
+div#input-area {
+	width: 50%;
+	min-height: 20em;
 	margin: 5em auto 0 auto;
 }
-div#white p {
-	margin-bottom: 1.3em;
+div#input-area p {
+	display: inline;
+	margin-right: 20px;
 }
-div#white input[type="text"] {
-	float: right;
+div#input-area input[type="text"] {
 	border: 2px solid #000;
 	font-size: 1.1em;
 }
-div#white input[type="submit"] {
+div#input-area button {
 	font-size: 1.1em;
 	width: 125px;
 	border: 2px solid black;
 	border-radius: 7px;
 	margin-left: 7em;
+}
+div.input-item {
+	margin-bottom: 20px;
+}
+
+.hidden {
+	display: none;
 }
 
 
