@@ -34,6 +34,7 @@ nav#pink ul li a {
 div#blue {
 	width: 20%;
 	height: auto;
+	min-height: 30em;
 	margin-left: 5%;
 	border: 2px solid #000;
 	background-color: #3BCEFC;
@@ -61,7 +62,8 @@ div#blue section ul#left {
 	margin-left: .75em;
 }
 div#blue section ul#right {
-	float: right;
+	float: left;
+	margin-left: .75em;
 	margin-right: 1.5em;
 }
 div#blue section p {
@@ -80,7 +82,8 @@ div#song-list {
 }
 div#yellow {
 	width: 67%;
-	height: 25em;
+	height: auto;
+	min-height: 30em;
 	margin-right: 5%;
 	border: 2px solid #000;
 	background-color: #F9F7AC;
@@ -140,6 +143,9 @@ div.input-item {
 
 .hidden {
 	display: none;
+}
+.song-item {
+	margin: 1em;
 }
 
 

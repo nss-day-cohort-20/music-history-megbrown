@@ -6,25 +6,52 @@ songs[songs.length] = "Another Brick in the Wall > by Pink Floyd on the album Th
 songs[songs.length] = "Welco(me to the Jungle > by Guns & Roses on the album Appetite for Destruction";
 songs[songs.length] = "Ironi!c > by Alanis Moris*ette on the album Jagged Little Pill";
 
-songs.push("Go Your Own Way > by Fleetwood Mac on the album Rumors");
-songs.unshift("Jeepster > by T.Rex on the album Electric Warrior");
+let songListOutput = document.getElementById("song-list");
+let listMusicLink = document.getElementById("list-music-link");
+let addMusicLink = document.getElementById("add-music-link");
+let addButton = document.getElementById("add-to-list");
+let newSongInput = document.getElementById("song-input");
+let newArtistInput = document.getElementById("artist-input");
+let newAlbumInput = document.getElementById("album-input");
+let listMusicPage = document.getElementById("list-music-page");
+let addMusicPage = document.getElementById("add-music-page");
+
 
 for (i=0; i<songs.length; i++) {
 	songs[i] = songs[i].replace(/\*|@|\(|!/g, '');
 	songs[i] = songs[i].replace(/>/g, "-")
 }
 
-for (i=0; i<songs.length; i++) {
-	let songList = document.getElementById("song-list");
-	songList.innerHTML += `<h3>${songs[i]}<h3>`;
+function addInitialDom() {
+	for (i=0; i<songs.length; i++) {
+		songListOutput.innerHTML += `<div class="song-item">${songs[i]}</div>`;
+	}
 }
 
-let listMusicPage = document.getElementById("list-music-page");
-let addMusicPage = document.getElementById("add-music-page");
+function songsToDom() {
+	let songCard = document.createElement("div");
+	songCard.setAttribute("class", "song-item");
+	for (i=0; i<songs.length; i++) {
+		songCard.innerHTML = songs[i];
+	}
+	songListOutput.appendChild(songCard);
+}
 
-let listMusicLink = document.getElementById("list-music-link");
-let addMusicLink = document.getElementById("add-music-link");
+function newSongToArray() {
+	let newSong = newSongInput.value;
+	let newArtist = newArtistInput.value;
+	let newAlbum = newAlbumInput.value;
+	songs.push(`${newSong} - by ${newArtist} on the album ${newAlbum}`);
+}
 
+window.addEventListener("load", function() {
+	addInitialDom()
+})
+
+addButton.addEventListener("click", function() {
+	newSongToArray();
+	songsToDom();
+})
 
 addMusicLink.addEventListener("click", function() {
 	addMusicPage.classList.remove("hidden");
