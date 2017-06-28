@@ -8,6 +8,7 @@ let newArtistInput = document.getElementById("artist-input");
 let newAlbumInput = document.getElementById("album-input");
 let listMusicPage = document.getElementById("list-music-page");
 let addMusicPage = document.getElementById("add-music-page");
+let moreBtn = document.createElement("button");
 
 function newSongToArray() {
 	let newSong = newSongInput.value;
@@ -35,7 +36,7 @@ listMusicLink.addEventListener("click", function() {
 	addMusicPage.classList.add("hidden");
 })
 
-function songToDom(songs) {
+function songsToDom(songs) {
 	songs.forEach( function(currentSong) {
 		let songEl = document.createElement("section");
 		songEl.setAttribute("class", "song");
@@ -47,7 +48,19 @@ function songToDom(songs) {
 		songListOutput.appendChild(songEl);
 		deleteBtnToSong(songEl);
 	});
+	addMoreButton();
 }
+
+
+function addMoreButton() {
+	moreBtn.setAttribute("id", "more");
+	moreBtn.innerHTML = "More >";
+	songListOutput.appendChild(moreBtn);
+}
+
+moreBtn.addEventListener("click", function() {
+		loadSongs2(songsToDom);
+})
 
 function deleteBtnToSong(songEl) {
 	let deleteBtn = document.createElement("button");
@@ -65,7 +78,6 @@ function loadSongs1(callback) {
 	load.addEventListener("load", function() {
 		songs = JSON.parse(this.responseText).songs1;
 		callback(songs)
-
 	})
 	load.open("GET", "data/songs1.json");
 	load.send();
@@ -82,5 +94,4 @@ function loadSongs2(callback) {
 	load.send();
 }
 
-loadSongs1(songToDom);
-loadSongs2(songToDom);
+loadSongs1(songsToDom);
