@@ -20,7 +20,6 @@ function newSongToArray() {
 							 </ul>`)
 }
 
-
 addButton.addEventListener("click", function() {
 	newSongToArray();
 	console.log(songs)
@@ -36,24 +35,30 @@ listMusicLink.addEventListener("click", function() {
 	addMusicPage.classList.add("hidden");
 })
 
-function songs1ToDom(songs1Arr) {
+function songToDom(songs) {
 	songs.forEach( function(currentSong) {
-		songListOutput.innerHTML += `<h2>${currentSong.name}</h2>
-																 <ul>
-																 <li>${currentSong.artist}</li>
-																 <li>${currentSong.album}</li>
-																 </ul>`
+		let songEl = document.createElement("section");
+		songEl.setAttribute("class", "song");
+		songEl.innerHTML = `<h2>${currentSong.name}</h2>
+											  <ul>
+											  <li>${currentSong.artist}</li>
+											  <li>${currentSong.album}</li>
+											  </ul>`
+		songListOutput.appendChild(songEl);
+		deleteBtnToSong(songEl);
 	});
 }
-function songs2ToDom(songs2Arr) {
-	songs.forEach( function(currentSong) {
-		songListOutput.innerHTML += `<h2>${currentSong.name}</h2>
-																 <ul>
-																 <li>${currentSong.artist}</li>
-																 <li>${currentSong.album}</li>
-																 </ul>`
-	});
+
+function deleteBtnToSong(songEl) {
+	let deleteBtn = document.createElement("button");
+	deleteBtn.setAttribute("class", "delete");
+	deleteBtn.innerHTML = "Delete";
+	songEl.appendChild(deleteBtn);
+	deleteBtn.addEventListener("click", function(){
+		songListOutput.removeChild(songEl);
+	})
 }
+
 
 function loadSongs1(callback) {
 	let load = new XMLHttpRequest();
@@ -77,5 +82,5 @@ function loadSongs2(callback) {
 	load.send();
 }
 
-loadSongs1(songs1ToDom);
-loadSongs2(songs2ToDom);
+loadSongs1(songToDom);
+loadSongs2(songToDom);

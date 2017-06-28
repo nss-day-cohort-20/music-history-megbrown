@@ -89,6 +89,7 @@ div#yellow {
 	background-color: #F9F7AC;
 	display: inline;
 	float: right;
+	padding-bottom: 50px;
 }
 div#yellow section {
 	margin-left: 2.5em;
@@ -101,6 +102,7 @@ div#yellow section ul {
 	padding-left: 0;
 	margin-top: 0;
 	margin-bottom: 25px;
+	display: inline;
 }
 div#yellow section ul li {
 	display: inline;
@@ -147,7 +149,9 @@ div.input-item {
 .song-item {
 	margin: 1em;
 }
-
+button.delete {
+	display: inline;
+}
 
 
 
