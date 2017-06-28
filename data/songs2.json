@@ -1,0 +1,24 @@
+{
+	"songs2": [
+		{
+		"name": "Legs2",
+		"artist": "ZZTop",
+		"album": "Eliminator"
+		},
+		{
+		"name": "The Logical Song",
+		"artist": "Supertramp",
+		"album": "Breakfast in America"
+		},
+		{
+		"name": "Welcome to the Jungle",
+		"artist": "Guns & Roses",
+		"album": "Apetite for Destruction"
+		},
+		{
+		"name": "Ironic",
+		"artist": "Alanis Morisette",
+		"album": "Jagged Little Pill"
+		}
+	]
+}
